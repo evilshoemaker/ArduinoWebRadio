@@ -17,7 +17,7 @@
 
 #include <Arduino.h>
 
-#include "printf.h"
+//#include "printf.h"
 #include <VS1053.h>
 #include <SPI.h>
 
@@ -201,8 +201,8 @@ void setup () {
     // initiate a serial port at 57600
     Serial.begin(57600);
     // internal routines                                                                                                                                         
-    printf_begin();                                                                                                                                                            
-    printf_P(PSTR(__FILE__ "\r\n"));                                                                                                                                           
+    //printf_begin();                                                                                                                                                            
+    //printf_P(PSTR(__FILE__ "\r\n"));                                                                                                                                           
     // initiate a player
     player.begin();
     player.modeSwitch(); //Change mode from MIDI to MP3 decoding (Vassilis Serasidis).
