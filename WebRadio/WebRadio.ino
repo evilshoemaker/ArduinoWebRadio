@@ -1,9 +1,19 @@
-void setup() {
-  // put your setup code here, to run once:
+#include <Ethernet.h>
+#include <SPI.h>
 
+struct RadioStation {
+  char server [50];
+  char url[70];
+  int port;
+};
+
+RadioStation radioStationList[] = {{"test", "test", 60}};
+
+void setup() {
+  
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+  
 }
+
