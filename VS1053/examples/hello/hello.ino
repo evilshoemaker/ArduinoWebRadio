@@ -207,7 +207,7 @@ void setup () {
     player.begin();
     player.modeSwitch(); //Change mode from MIDI to MP3 decoding (Vassilis Serasidis).
     // set maximum output volume
-    player.setVolume(0x00);
+    player.setVolume(0x01);
 }
 
 void loop() {
