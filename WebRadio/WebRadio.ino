@@ -16,14 +16,6 @@ VS1053 player(9, 6, 7, 8); // cs_pin, dcs_pin, dreq_pin, reset_pin
 
 #define BUF_SIZE 1
 
-//#define BREAKOUT_RESET  8      // VS1053 reset pin (output)
-//#define BREAKOUT_CS     9     // VS1053 chip select pin (output)
-//#define BREAKOUT_DCS    6      // VS1053 Data/command select pin (output)
-//#define DREQ 7       // VS1053 Data request, ideally an Interrupt pin
-
-//Adafruit_VS1053 musicPlayer(BREAKOUT_RESET, BREAKOUT_CS, BREAKOUT_DCS, DREQ);
-//Adafruit_VS1053 musicPlayer(11, 12, 13, 8, 9, 6, 7);//int8_t mosi, int8_t miso, int8_t clk, int8_t rst, int8_t cs, int8_t dcs, int8_t dreq
-
 struct RadioStation {
   char const * server;
   char const * url;
@@ -118,66 +110,6 @@ void setup() {
 }
 
 void loop() {
-  /*if (client.available() ) {
-      totalBytes=client.readBytes(streamData, 32);
-      my_callback(streamData, totalBytes);
-  }
-
-  
-  if(radioStationIsChanged == true) {//If 'next' or 'previous' switch has been pressed, play the selected webradio station.
-    playWebRadioStation(radioStationList[0], "01");
-  }
-
-  radioStationIsChanged = false; */
-
-  /*if((millis() > timer + 5000)) // Timeout timer. If the song stops playing for 5 seconds re-connect to the server.
-  {   
-   radioStationIsChanged = true; 
-   ViewStationInfo = false;
-   Serial.print(F("\nre-connecting to the server...\n"));
-   timer = millis(); 
-  }*/
-  
-  /*if (client.available()) {
-    char c = client.read();
-    Serial.print(c);
-    //totalBytes=client.read(streamData, 32);
-  }
-
-  // if the server's disconnected, stop the client:
-  if (!client.connected()) {
-    Serial.println();
-    Serial.println("disconnecting.");
-    client.stop();
-
-    // do nothing forevermore:
-    while (true);
-  }*/
-  
-  /*unsigned long startTime = millis();
-  
-  totalBytes=0;
-  while  (((millis() - startTime ) < 100)) {
-    if (client.available() ) {
-      totalBytes=client.read(streamData, 32);
-      break;
-    }
-  }
-  if (totalBytes==0) {
-    Serial.print(".");  
-    return;
-  } 
-  else {
-    //noReceptionCounter=0;
-    if (totalBytes != 32) Serial.print("+"); 
-    totalReadData += totalBytes;
-    if (totalReadData > 10000) {
-      Serial.print("*"); 
-      totalReadData=0;
-    }
-  }   
-  player.playChunk(streamData, totalBytes); */
-  //MP3player.transferStream(totalBytes,streamData);
   test();
 }
 
